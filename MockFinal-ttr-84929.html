@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/reservation.css">
+        <script src="js/Reservation.class.js"></script>
+        <script src="js/reservationsupport.js"></script>
+        <script src="js/page.js"></script>
+
+    </head>
+    <body>
+        <div id="box">
+        <div id="box1">
+            <form>
+                <table>
+                    <tr>
+                        <td>
+                            Your Name: 
+                        </td>
+                        <td>
+                            Phone: 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" id="nameInput">
+                        </td>
+                        <td>
+                            <input type="text" id="phoneInput">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Reservation Start Time
+                        </td>
+                        <td>
+                            Reservation End Time
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="date" id="startTime" onchange="updateDisplayPanel();">
+                        </td>
+                        <td>
+                            <input type="date" id="endTime" onchange="updateDisplayPanel();">
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <td>
+                            Adults: 
+                            <select id="adults" onmouseup="updateDisplayPanel();">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                        </td>
+                        <td>
+                            Childen: 
+                            <select id="chidren" onmouseup="updateDisplayPanel();">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Gender: </td>
+                        <td>
+                            <input type="radio" name="genderInput" value="Male" id="male">Male<br>
+                            <input type="radio" name="genderInput" value="Female" id="female">Female<br>
+                            <input type="radio" name="genderInput" value="Biosexual" id="bio">BioSexual<br>
+                        </td>
+                    </tr>                  
+                </table>
+            </form>
+        </div>
+        <div id="box2">
+            <table id="table">
+                <thead>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>Child Count</th>
+                    <th>Adult Count</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Subtotal</th>
+                    <th>Tax</th>
+                    <th>Total</th>
+                </thead>
+                <tbody id="tableBody">
+
+                </tbody>
+            </table>
+        </div>
+        <div id="box3">
+            <h3>Reservation Information</h3>
+            <p>================================================</p>
+            <p id="nameUpdate">Name: </p>
+            <p id="phoneUpdate">Phone: </p>
+            <p id="chilCount">Child Count: </p>
+            <p id="adultCount">Adult Count: </p>
+            <p id="startDate">Start Date: </p>
+            <p id="endDate">End Date: </p>
+            <p id="gender">Gender: </p>
+            <p>================================================</p>
+            <input type="button" value="Confirm Reservation" onclick="confirmReservation();">
+        </div>
+        <div id="box4">
+            <p id="totalReservation">Number of Reservation: </p>
+            <p id="averageReservation">Average of Reservation: </p>
+            <p id="totalChild">Total number of underage customer: </p>
+            <p id="totalAdult">Total of Adults: </p>
+        </div>
+        </div>
+    </body>
+</html>
